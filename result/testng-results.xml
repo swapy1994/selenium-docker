@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="20" passed="16" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-30T13:45:26 GMT" name="flight-reservation" finished-at="2023-12-30T13:45:47 GMT" duration-ms="21081">
+    <groups>
+    </groups>
+    <test started-at="2023-12-30T13:45:26 GMT" name="passengers-count-3" finished-at="2023-12-30T13:45:45 GMT" duration-ms="19932">
+      <class name="com.automation.selenium_docker.flightreservation.FlightReservationTest">
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:26 GMT" name="setDriver" finished-at="2023-12-30T13:45:29 GMT" duration-ms="3932" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5b7ea70d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setParameters(java.lang.String)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:29 GMT" name="setParameters" finished-at="2023-12-30T13:45:30 GMT" depends-on-methods="com.automation.selenium_docker.basepackege.AbstractTest.setDriver" duration-ms="196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/flight-reservation/passenger-3.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setParameters -->
+        <test-method signature="userRegistrationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:30 GMT" name="userRegistrationTest" finished-at="2023-12-30T13:45:37 GMT" duration-ms="7717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userRegistrationTest -->
+        <test-method signature="registrationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:37 GMT" name="registrationConfirmationTest" finished-at="2023-12-30T13:45:38 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.userRegistrationTest" duration-ms="975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationConfirmationTest -->
+        <test-method signature="flightSearchTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:38 GMT" name="flightSearchTest" finished-at="2023-12-30T13:45:43 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.registrationConfirmationTest" duration-ms="4134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSearchTest -->
+        <test-method signature="flightSelectionTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:43 GMT" name="flightSelectionTest" finished-at="2023-12-30T13:45:44 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSearchTest" duration-ms="1559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSelectionTest -->
+        <test-method signature="flightReservationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:44 GMT" name="flightReservationConfirmationTest" finished-at="2023-12-30T13:45:44 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSelectionTest" duration-ms="308" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [$1763 USD] but found [$1753 USD]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [$1763 USD] but found [$1753 USD]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.automation.selenium_docker.flightreservation.FlightReservationTest.flightReservationConfirmationTest(FlightReservationTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightReservationConfirmationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@6da00fb9]" started-at="2023-12-30T13:45:44 GMT" name="tearDown" finished-at="2023-12-30T13:45:45 GMT" duration-ms="981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.selenium_docker.flightreservation.FlightReservationTest -->
+    </test> <!-- passengers-count-3 -->
+    <test started-at="2023-12-30T13:45:26 GMT" name="passengers-count-4" finished-at="2023-12-30T13:45:45 GMT" duration-ms="19876">
+      <class name="com.automation.selenium_docker.flightreservation.FlightReservationTest">
+        <test-method is-config="true" signature="setupConfig()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:26 GMT" name="setupConfig" finished-at="2023-12-30T13:45:26 GMT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupConfig -->
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:26 GMT" name="setDriver" finished-at="2023-12-30T13:45:30 GMT" duration-ms="4011" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2bef51f2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setParameters(java.lang.String)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:30 GMT" name="setParameters" finished-at="2023-12-30T13:45:30 GMT" depends-on-methods="com.automation.selenium_docker.basepackege.AbstractTest.setDriver" duration-ms="117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/flight-reservation/passenger-4.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setParameters -->
+        <test-method signature="userRegistrationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:30 GMT" name="userRegistrationTest" finished-at="2023-12-30T13:45:37 GMT" duration-ms="7014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userRegistrationTest -->
+        <test-method signature="registrationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:37 GMT" name="registrationConfirmationTest" finished-at="2023-12-30T13:45:38 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.userRegistrationTest" duration-ms="1008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationConfirmationTest -->
+        <test-method signature="flightSearchTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:38 GMT" name="flightSearchTest" finished-at="2023-12-30T13:45:41 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.registrationConfirmationTest" duration-ms="3576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSearchTest -->
+        <test-method signature="flightSelectionTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:41 GMT" name="flightSelectionTest" finished-at="2023-12-30T13:45:43 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSearchTest" duration-ms="1523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSelectionTest -->
+        <test-method signature="flightReservationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:43 GMT" name="flightReservationConfirmationTest" finished-at="2023-12-30T13:45:44 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSelectionTest" duration-ms="1488" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [$238 USD] but found [$2338 USD]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [$238 USD] but found [$2338 USD]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.automation.selenium_docker.flightreservation.FlightReservationTest.flightReservationConfirmationTest(FlightReservationTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightReservationConfirmationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@75b25825]" started-at="2023-12-30T13:45:44 GMT" name="tearDown" finished-at="2023-12-30T13:45:45 GMT" duration-ms="983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.selenium_docker.flightreservation.FlightReservationTest -->
+    </test> <!-- passengers-count-4 -->
+    <test started-at="2023-12-30T13:45:26 GMT" name="passengers-count-2" finished-at="2023-12-30T13:45:47 GMT" duration-ms="21011">
+      <class name="com.automation.selenium_docker.flightreservation.FlightReservationTest">
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:26 GMT" name="setDriver" finished-at="2023-12-30T13:45:30 GMT" duration-ms="4073" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30f5a68a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setParameters(java.lang.String)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:30 GMT" name="setParameters" finished-at="2023-12-30T13:45:30 GMT" depends-on-methods="com.automation.selenium_docker.basepackege.AbstractTest.setDriver" duration-ms="54" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/flight-reservation/passenger-2.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setParameters -->
+        <test-method signature="userRegistrationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:30 GMT" name="userRegistrationTest" finished-at="2023-12-30T13:45:37 GMT" duration-ms="7583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userRegistrationTest -->
+        <test-method signature="registrationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:37 GMT" name="registrationConfirmationTest" finished-at="2023-12-30T13:45:39 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.userRegistrationTest" duration-ms="1591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationConfirmationTest -->
+        <test-method signature="flightSearchTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:39 GMT" name="flightSearchTest" finished-at="2023-12-30T13:45:42 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.registrationConfirmationTest" duration-ms="3620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSearchTest -->
+        <test-method signature="flightSelectionTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:42 GMT" name="flightSelectionTest" finished-at="2023-12-30T13:45:43 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSearchTest" duration-ms="940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSelectionTest -->
+        <test-method signature="flightReservationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:43 GMT" name="flightReservationConfirmationTest" finished-at="2023-12-30T13:45:45 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSelectionTest" duration-ms="2003" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [$1159 USD] but found [$1169 USD]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [$1159 USD] but found [$1169 USD]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.automation.selenium_docker.flightreservation.FlightReservationTest.flightReservationConfirmationTest(FlightReservationTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightReservationConfirmationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@20a14b55]" started-at="2023-12-30T13:45:46 GMT" name="tearDown" finished-at="2023-12-30T13:45:47 GMT" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.selenium_docker.flightreservation.FlightReservationTest -->
+    </test> <!-- passengers-count-2 -->
+    <test started-at="2023-12-30T13:45:26 GMT" name="passengers-count-1" finished-at="2023-12-30T13:45:47 GMT" duration-ms="21081">
+      <class name="com.automation.selenium_docker.flightreservation.FlightReservationTest">
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:26 GMT" name="setDriver" finished-at="2023-12-30T13:45:30 GMT" duration-ms="4046" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@650eab8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setParameters(java.lang.String)[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:30 GMT" name="setParameters" finished-at="2023-12-30T13:45:30 GMT" depends-on-methods="com.automation.selenium_docker.basepackege.AbstractTest.setDriver" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/flight-reservation/passenger-1.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setParameters -->
+        <test-method signature="userRegistrationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:30 GMT" name="userRegistrationTest" finished-at="2023-12-30T13:45:38 GMT" duration-ms="7840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userRegistrationTest -->
+        <test-method signature="registrationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:38 GMT" name="registrationConfirmationTest" finished-at="2023-12-30T13:45:39 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.userRegistrationTest" duration-ms="984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationConfirmationTest -->
+        <test-method signature="flightSearchTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:39 GMT" name="flightSearchTest" finished-at="2023-12-30T13:45:41 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.registrationConfirmationTest" duration-ms="2756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSearchTest -->
+        <test-method signature="flightSelectionTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:41 GMT" name="flightSelectionTest" finished-at="2023-12-30T13:45:44 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSearchTest" duration-ms="2799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightSelectionTest -->
+        <test-method signature="flightReservationConfirmationTest()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:44 GMT" name="flightReservationConfirmationTest" finished-at="2023-12-30T13:45:45 GMT" depends-on-methods="com.automation.selenium_docker.flightreservation.FlightReservationTest.flightSelectionTest" duration-ms="1388" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [$585 USD] but found [$584 USD]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [$585 USD] but found [$584 USD]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.automation.selenium_docker.flightreservation.FlightReservationTest.flightReservationConfirmationTest(FlightReservationTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightReservationConfirmationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.selenium_docker.flightreservation.FlightReservationTest@4f704591]" started-at="2023-12-30T13:45:46 GMT" name="tearDown" finished-at="2023-12-30T13:45:47 GMT" duration-ms="1064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.selenium_docker.flightreservation.FlightReservationTest -->
+    </test> <!-- passengers-count-1 -->
+  </suite> <!-- flight-reservation -->
+</testng-results>

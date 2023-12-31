@@ -1,0 +1,15 @@
+{
+	"firstname": "Akshay",
+	"lastName" :"Mali",
+	"email": "123@gmial.com",
+	"password": "12345",
+	"street": "123 main street",
+	"city": "sangli",
+	"zip": "416416",
+	"tripType":"Round Trip",
+	"passengerCount":"4",
+	"departureLocation":"Paris",
+	"arrivalLocation":"London",
+	"serviceClass":"Business",
+	"expectedPrice":"$238 USD"
+}

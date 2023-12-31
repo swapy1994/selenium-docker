@@ -1,0 +1,15 @@
+{
+	"firstname": "Swapnil",
+	"lastName" :"Mali",
+	"email": "123@gmial.com",
+	"password": "12345",
+	"street": "123 main street",
+	"city": "sangli",
+	"zip": "416416",
+	"tripType":"Round Trip",
+	"passengerCount":"1",
+	"departureLocation":"London",
+	"arrivalLocation":"London",
+	"serviceClass":"Business",
+	"expectedPrice":"$585 USD"
+}

@@ -1,0 +1,15 @@
+{
+	"firstname": "pradip",
+	"lastName" :"Mali",
+	"email": "123@gmial.com",
+	"password": "12345",
+	"street": "123 main street",
+	"city": "sangli",
+	"zip": "416416",
+	"tripType":"Round Trip",
+	"passengerCount":"3",
+	"departureLocation":"New York",
+	"arrivalLocation":"New York",
+	"serviceClass":"Business",
+	"expectedPrice":"$1763 USD"
+}
