@@ -21,7 +21,7 @@ pipeline{
 
         stage('Push Image'){
             steps{
-                bat "docker push swapy1994/selenium-tests:v1.0"
+                bat "docker push swapy1994/selenium-tests"
             }
         }
 
