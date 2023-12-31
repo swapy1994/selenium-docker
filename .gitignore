@@ -26,8 +26,8 @@
 
 ### Maven template
 **/target/
-**/test-output
-**/result
+**/test-output/
+**/result/
 **/pom.xml.tag
 **/pom.xml.releaseBackup
 **/pom.xml.versionsBackup
