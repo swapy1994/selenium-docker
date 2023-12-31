@@ -15,7 +15,7 @@ pipeline{
 
         stage('Build image'){
             steps{
-                bat "docker build -t=swapy1994/selenium-tests"
+                bat "docker build -t=swapy1994/selenium-tests ."
             }
         }
 
