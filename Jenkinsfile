@@ -1,5 +1,6 @@
 
 // this approach considers that node machine has not installed with maven. so we will install maven as well
+// also this approach will work only on linux and mac os.
 pipeline{
 
     agent none
