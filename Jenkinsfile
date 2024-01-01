@@ -1,4 +1,5 @@
 
+// this file is especially for windows bat approach
 pipeline{
 
     agent any
@@ -20,11 +21,28 @@ pipeline{
         }
 
         stage('Push Image'){
+        	environment{
+        	    // 'dockerhub-creds' is the ID of docker credentials that we have saved in jenkins manage credentials option.
+                DOCKER_HUB = credentials('dockerhub-creds')    
+        	}
+
             steps{
+            	// for working linux machines use ${} instead of %%
+                bat 'docker login -u %DOCKER_HUB_USR% -p %DOCKER_HUB_PSW%'
                 bat "docker push swapy1994/selenium-tests"
             }
         }
 
     }
+    
+    post{
+        always {
+            
+            bat "docker logout"
+        }
+
+        
+    }
+
 
 }
