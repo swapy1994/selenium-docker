@@ -1,48 +1,51 @@
 
-// this file is especially for windows bat approach
+// this approach considers that node machine has not installed with maven. so we will install maven as well
 pipeline{
 
-    agent any
+    agent none
 
     stages{
 
         stage('Build Jar'){
+            agent {
+                // when jenkins creates the container it will do the volume mapping. so our code will be available inside the
+                //container. in our case it is mapped with under mapped-volumes of 01-jenkins folder in SELENIUM_DOCKER_BUILDER.
             steps{
-                //for windows users use 'bat' :-
-                bat "mvn clean package -DskipTests"
-                //for linux and mac users use 'sh' : sh "docker run -e NUMBER=${NUMBER} swapy1994/squares"
+
+            }    
+                
+                docker{
+                    image 'maven:3.9.6-eclipse-temurin-17-focal'
+                    //here we doing custome mapping so that container do not have to jars each time.
+                    // so here we are mapping node_m2_path:container_m2_path as root user
+                    args ' -u root -v /temp/m2:/root/.m2'
+                }
+            }
+            steps{
+                sh 'mvn clean package -DskipTests'
             }
         }
 
         stage('Build image'){
             steps{
-                bat "docker build -t=swapy1994/selenium-tests ."
+                script {
+                    app = docker.build('swapy1994/selenium-tests')
+                }
             }
         }
 
         stage('Push Image'){
-        	environment{
-        	    // 'dockerhub-creds' is the ID of docker credentials that we have saved in jenkins manage credentials option.
-                DOCKER_HUB = credentials('dockerhub-creds')    
-        	}
 
             steps{
-            	// for working linux machines use ${} instead of %%
-                bat 'docker login -u %DOCKER_HUB_USR% -p %DOCKER_HUB_PSW%'
-                bat "docker push swapy1994/selenium-tests"
+            	script {
+                    // registry url is blank for dockerhub offically so we will leave it blank.
+                    docker.withRegistry('', 'dockerhub-creds'){
+                        app.push("latest")
+                    }
+                }
             }
         }
 
     }
-    
-    post{
-        always {
-            
-            bat "docker logout"
-        }
-
-        
-    }
-
 
 }
