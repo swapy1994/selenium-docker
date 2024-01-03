@@ -34,6 +34,12 @@ pipeline{
             }
         }
 
+        stage('Execute SELENIUM_DOCKER_RUNNER'){
+            steps {
+                build job: 'SELENIUM_DOCKER_RUNNER', parameters: [string(name: 'BROWSER', value: 'firefox')]
+            }
+        }
+
     }
     
     post{
